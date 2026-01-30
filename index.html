@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBillZen</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bangla Font -->
+    <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Bangla', sans-serif;
+        }
+
+        .heading {
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 1.5rem 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            background-color: #5e8ab6;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.3rem;
+            color: #fff;
+        }
+
+        footer img {
+            width: 30px;
+            height: 30px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="heading">
+            Welcome to,<br>
+            <span style="color:brown;">EBillZen</span> Home Page
+        </h1>
+
+        <!-- Intro Section -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6 mb-3">
+                <iframe style="width:100%; height:300px;" src="https://www.youtube.com/embed/CeAEXuKOwn8"
+                    title="EBillZen Installation Guide" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="text-success">What is EBillZen? (EBillZen কি?)</h4>
+                <p class="text-justify">
+                    <strong style="color:rebeccapurple;">Ans:</strong>
+                    It is an Android mobile application that helps home owners store and manage
+                    residence/tenant sub-meter billing information.
+                    Initially, you input meter details; afterwards, only current readings are required —
+                    all calculations are handled automatically by the app.
+                    <br><br>
+                    (এটি একটি অ্যান্ড্রয়েড অ্যাপ যা বাড়ির মালিকদের সাব-মিটার বিল সংরক্ষণ ও হিসাব করতে সহায়তা করে।
+                    প্রথমবার মিটারের তথ্য দিতে হয়, এরপর শুধু রিডিং দিলেই সব হিসাব অ্যাপ নিজে করে।)
+                </p>
+            </div>
+        </div>
+
+        <!-- Why Use Section -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h4 class="text-success">Why should I use the app? (আমি কেন অ্যাপটি ব্যবহার করবো?)</h4>
+                <p class="text-justify">
+                    <strong style="color:rebeccapurple;">Ans:</strong>
+                    This app simplifies meter bill calculation for residences.
+                    No paperwork or rough calculations are required —
+                    everything is handled digitally using your phone.
+                    You can also share monthly bill details with tenants,
+                    ensuring transparency between owners and tenants.
+                    <br><br>
+                    (এই অ্যাপটি মিটার বিল হিসাবকে সহজ করে। খাতা বা কাগজের দরকার নেই।
+                    ভাড়াটিয়াদের সাথে মাসিক বিল শেয়ার করে স্বচ্ছতা বজায় রাখা যায়।)
+                </p>
+            </div>
+        </div>
+
+        <!-- Download Buttons -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <a class="btn btn-primary me-2 mb-2" href="https://amzn.to/3RV4KrZ" target="_blank">
+                    View on Amazon Appstore
+                </a>
+                <a class="btn btn-secondary mb-2"
+                    href="https://drive.google.com/file/d/1m-mu-4ggqf8yV5SbYTMdExRFvJUtms9W/view" target="_blank">
+                    Download APK
+                </a>
+            </div>
+        </div>
+
+        <!-- Policy Links -->
+        <div class="row mb-4">
+            <div class="col-md-12 text-end">
+                <a class="btn btn-warning me-2" href="/terms.html">Terms (শর্তাবলী)</a>
+                <a class="btn btn-info" href="/guides.html">Guidelines (দিকনির্দেশনা)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>Uttar Mawna, Gazipur, Bangladesh</p>
+                    <p>Email: innovatenestlabs@gmail.com</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="favicon.ico" alt="EBillZen Logo">
+                </div>
+            </div>
+
+            <p id="copyright"></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("copyright").innerHTML =
+                "&copy; " + new Date().getFullYear() +
+                " EBillZen — A Product of Innovate Nest Labs. All Rights Reserved.";
+        });
+    </script>
+
+</body>
+
+</html>
