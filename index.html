@@ -4,146 +4,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBillZen</title>
+    <title>Innovate Nest Labs | EBillZen</title>
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bangla Font -->
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
 
     <style>
-        * {
-            font-family: 'Bangla', sans-serif;
+        :root {
+            --brand-primary: #2c3e50;
+            --brand-accent: #5e8ab6;
+            --ebillzen-color: #a52a2a;
+            /* Brown from your original */
         }
 
-        .heading {
-            text-align: center;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin: 1.5rem 0;
+        body {
+            font-family: 'Bangla', system-ui, -apple-system, sans-serif;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
+            padding: 60px 0;
+            border-bottom: 1px solid #dbe7f3;
+        }
+
+        .company-name {
+            font-weight: 800;
+            color: var(--brand-primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .product-badge {
+            background: var(--ebillzen-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .main-heading {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .vs-box {
+            background: #fff5f5;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--ebillzen-color);
         }
 
         footer {
-            margin-top: 3rem;
-            background-color: #5e8ab6;
-            padding: 20px 0;
-            text-align: center;
+            background-color: var(--brand-accent);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
         }
 
-        footer p {
-            margin-bottom: 0.3rem;
-            color: #fff;
+        .footer-link {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-left: 15px;
         }
 
-        footer img {
-            width: 30px;
-            height: 30px;
-            margin-top: 5px;
+        .footer-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .btn-ebillzen {
+            background-color: var(--ebillzen-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-ebillzen:hover {
+            background-color: #802020;
+            color: white;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1 class="heading">
-            Welcome to,<br>
-            <span style="color:brown;">EBillZen</span> Home Page
-        </h1>
+    <header class="hero-section text-center">
+        <div class="container">
+            <p class="company-name mb-1">Innovate Nest Labs</p>
+            <div class="product-badge">Flagship Product</div>
+            <h1 class="main-heading">Digitalizing Sub-Meter Management with <span
+                    style="color: var(--ebillzen-color);">EBillZen</span></h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Empowering home owners, shop owners, and market managers to move beyond the "Khata" and embrace
+                automation.
+            </p>
+        </div>
+    </header>
 
-        <!-- Intro Section -->
-        <div class="row align-items-center mb-4">
-            <div class="col-md-6 mb-3">
-                <iframe style="width:100%; height:300px;" src="https://www.youtube.com/embed/CeAEXuKOwn8"
-                    title="EBillZen Installation Guide" allowfullscreen>
-                </iframe>
+    <div class="container mt-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/CeAEXuKOwn8" title="EBillZen Guide"
+                        allowfullscreen></iframe>
+                </div>
             </div>
-
-            <div class="col-md-6">
-                <h4 class="text-success">What is EBillZen? (EBillZen কি?)</h4>
-                <p class="text-justify">
-                    <strong style="color:rebeccapurple;">Ans:</strong>
-                    It is an Android mobile application that helps home owners store and manage
-                    residence/tenant sub-meter billing information.
-                    Initially, you input meter details; afterwards, only current readings are required —
-                    all calculations are handled automatically by the app.
-                    <br><br>
-                    (এটি একটি অ্যান্ড্রয়েড অ্যাপ যা বাড়ির মালিকদের সাব-মিটার বিল সংরক্ষণ ও হিসাব করতে সহায়তা করে।
-                    প্রথমবার মিটারের তথ্য দিতে হয়, এরপর শুধু রিডিং দিলেই সব হিসাব অ্যাপ নিজে করে।)
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-3">What is EBillZen?</h3>
+                <p>
+                    EBillZen is a specialized home automation tool designed by <strong>Innovate Nest Labs</strong>.
+                    It specifically targets the pain points of property management in Bangladesh.
+                </p>
+                <div class="vs-box mt-3">
+                    <strong>Goodbye Khata, Hello System:</strong><br>
+                    No more manual calculations on paper or messy "Khata" records. EBillZen automates the billing
+                    process for home owners, market owners, and shop complexes.
+                </div>
+                <p class="mt-3 text-secondary italic">
+                    (এটি একটি অটোমেশন সিস্টেম যা বাড়ির মালিক বা মার্কেট মালিকদের হাতে কলমে হিসাব করার ঝামেলা থেকে মুক্তি
+                    দেয়।)
                 </p>
             </div>
         </div>
 
-        <!-- Why Use Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-success">Why should I use the app? (আমি কেন অ্যাপটি ব্যবহার করবো?)</h4>
-                <p class="text-justify">
-                    <strong style="color:rebeccapurple;">Ans:</strong>
-                    This app simplifies meter bill calculation for residences.
-                    No paperwork or rough calculations are required —
-                    everything is handled digitally using your phone.
-                    You can also share monthly bill details with tenants,
-                    ensuring transparency between owners and tenants.
-                    <br><br>
-                    (এই অ্যাপটি মিটার বিল হিসাবকে সহজ করে। খাতা বা কাগজের দরকার নেই।
-                    ভাড়াটিয়াদের সাথে মাসিক বিল শেয়ার করে স্বচ্ছতা বজায় রাখা যায়।)
-                </p>
+        <hr class="my-5">
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5 class="fw-bold text-success">Accurate Calculation</h5>
+                    <p>Input meter details once, and then simply enter the current reading. The system calculates
+                        everything instantly with zero errors.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5 class="fw-bold text-success">Transparency</h5>
+                    <p>Generate digital bill summaries and share them instantly with tenants via WhatsApp or SMS. Build
+                        trust through clear data.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5 class="fw-bold text-success">Versatile Use</h5>
+                    <p>Perfect for residential sub-meters, commercial shop units, or large market complexes where
+                        multiple meters need tracking.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Download Buttons -->
-        <div class="row mb-4">
-            <div class="col-md-6">
-                <a class="btn btn-primary me-2 mb-2" href="https://amzn.to/3RV4KrZ" target="_blank">
-                    View on Amazon Appstore
-                </a>
-                <a class="btn btn-secondary mb-2"
-                    href="https://drive.google.com/file/d/1m-mu-4ggqf8yV5SbYTMdExRFvJUtms9W/view" target="_blank">
-                    Download APK
-                </a>
-            </div>
-        </div>
+        <div class="text-center mt-5 pt-4">
+            <h4 class="mb-4">Get Started with EBillZen</h4>
+            <a class="btn btn-ebillzen btn-lg px-4 me-md-2 mb-3" href="https://amzn.to/3RV4KrZ" target="_blank">Amazon
+                Appstore</a>
+            <a class="btn btn-outline-dark btn-lg px-4 mb-3"
+                href="https://drive.google.com/file/d/1m-mu-4ggqf8yV5SbYTMdExRFvJUtms9W/view" target="_blank">Download
+                APK</a>
 
-        <!-- Policy Links -->
-        <div class="row mb-4">
-            <div class="col-md-12 text-end">
-                <a class="btn btn-warning me-2" href="/terms.html">Terms (শর্তাবলী)</a>
-                <a class="btn btn-info" href="/guides.html">Guidelines (দিকনির্দেশনা)</a>
+            <div class="mt-4">
+                <a class="footer-link text-dark fw-bold" href="privacy-policy.html">Privacy Policy</a>
+                <a class="footer-link text-dark fw-bold" href="/terms.html">Terms</a>
+                <a class="footer-link text-dark fw-bold" href="/guides.html">Guidelines</a>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p>Uttar Mawna, Gazipur, Bangladesh</p>
-                    <p>Email: innovatenestlabs@gmail.com</p>
+                <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+                    <h5 class="fw-bold">Innovate Nest Labs</h5>
+                    <p class="small mb-0">Uttar Mawna, Gazipur, Bangladesh</p>
+                    <p class="small">innovatenestlabs@gmail.com</p>
                 </div>
-                <div class="col-md-6">
-                    <img src="favicon.ico" alt="EBillZen Logo">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="favicon.ico" alt="Logo"
+                        style="width: 50px; height: 50px; filter: brightness(0) invert(1);">
+                </div>
+                <div class="col-md-4 text-md-end text-center">
+                    <p class="small mb-1">Follow our updates</p>
+                    <div class="small">
+                        &copy; <span id="year"></span> Innovate Nest Labs.
+                    </div>
                 </div>
             </div>
-
-            <p id="copyright"></p>
         </div>
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("copyright").innerHTML =
-                "&copy; " + new Date().getFullYear() +
-                " EBillZen — A Product of Innovate Nest Labs. All Rights Reserved.";
-        });
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
 </body>
