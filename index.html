@@ -284,12 +284,21 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     const playStoreBtn = document.getElementById("playStoreBtn");
+        //     const isAndroid = /Android/i.test(navigator.userAgent);
+
+        //     if (isAndroid) {
+        //         // যদি অ্যান্ড্রয়েড হয়, তবে লিঙ্ক পরিবর্তন করে সরাসরি অ্যাপ ওপেন করার নির্দেশ দাও
+        //         playStoreBtn.href = "market://details?id=com.innovatenestlabs.ebillzen";
+        //     }
+        // });
         document.addEventListener("DOMContentLoaded", function () {
             const playStoreBtn = document.getElementById("playStoreBtn");
-            const isAndroid = /Android/i.test(navigator.userAgent);
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            if (isAndroid) {
-                // যদি অ্যান্ড্রয়েড হয়, তবে লিঙ্ক পরিবর্তন করে সরাসরি অ্যাপ ওপেন করার নির্দেশ দাও
+            // চেক করা হচ্ছে ইউজার কি অ্যান্ড্রয়েড থেকে ব্রাউজ করছে কি না
+            if (/android/i.test(userAgent)) {
                 playStoreBtn.href = "market://details?id=com.innovatenestlabs.ebillzen";
             }
         });
