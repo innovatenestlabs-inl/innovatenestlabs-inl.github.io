@@ -1,257 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBillZen App Guidelines</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>অ্যাপ গাইডলাইন | EBillZen</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
+
     <style>
-        * {
-            font-family: 'Bangla', sans-serif;
-            font-size: 1.1rem;
+        :root {
+            --brand-primary: #1b5e20;
+            /* Deep Forest Green */
+            --brand-accent: #2e7d32;
+            /* Medium Green */
+            --brand-light: #f1f8e9;
+            /* Very Light Green */
+            --text-main: #2c3e50;
         }
 
+        body {
+            font-family: 'Bangla', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            line-height: 1.8;
+            background-color: #fcfdfc;
+            font-size: 1.05rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            border-bottom: 2px solid var(--brand-primary);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--brand-primary) !important;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-main) !important;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--brand-light) 0%, #ffffff 100%);
+            padding: 60px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h2.section-title {
+            color: var(--brand-primary);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* Guide Navigation Card */
+        .guide-nav-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--brand-primary);
+            position: sticky;
+            top: 100px;
+        }
+
+        .guide-nav-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .guide-nav-card li {
+            margin-bottom: 12px;
+        }
+
+        .guide-nav-card a {
+            text-decoration: none;
+            color: var(--text-main);
+            transition: 0.3s;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .guide-nav-card a:hover {
+            background-color: var(--brand-light);
+            color: var(--brand-primary);
+            padding-left: 15px;
+        }
+
+        /* Content Sections */
+        .guide-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eee;
+        }
+
+        .guide-section h5 {
+            color: var(--brand-primary);
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--brand-light);
+        }
+
+        .note-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #6c757d;
+            padding: 15px;
+            font-size: 0.95rem;
+            margin: 15px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .danger-note {
+            background-color: #fff5f5;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            font-size: 0.95rem;
+            margin: 15px 0;
+            color: #a00;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 2em;
-            background-color: #5e8ab6;
-            padding: 20px 0;
-            text-align: center;
+            background-color: #1a1a1a;
+            color: #efefef;
+            padding: 60px 0 30px;
+            margin-top: 80px;
         }
 
-        footer p {
-            margin-bottom: 0;
+        .footer-logo-text {
             color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
         }
 
-        footer img {
-            width: 30px;
-            height: 30px;
-            margin-bottom: 10px;
+        .footer-link {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--brand-accent);
+        }
+
+        @media (max-width: 991px) {
+            .guide-nav-card {
+                position: relative;
+                top: 0;
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h2 class="title">অ্যাপ গাইডলাইনে আপনাকে স্বাগতম</h2>
-        <h5><i>গাইডলাইনকে আমরা নিম্নোক্ত ক্যাটাগরিতে ভাগ করতে পারি।</i></h5>
-        <ul type="square">
-            <li><a href="#log-reg">ব্যবহারকারী নিবন্ধন আর লগইন এবং পিন পুনরুদ্ধার</a></li>
-            <li><a href="#new-meter">নতুন মিটার তথ্য সাবমিশন</a></li>
-            <li><a href="#calc-bill">মিটার বিল হিসাব ও তথ্য শেয়ার</a></li>
-            <li><a href="#meter-update">মিটার তথ্য হালনাগাদ/আপডেট এবং মুছে ফেলা</a></li>
-            <li><a href="#bill-share">হিসাবকৃত বিল তথ্য দেখা ও তথ্য শেয়ার</a></li>
-            <li><a href="#user-update">ব্যবহারকারীর তথ্য হালনাগাদ/আপডেট</a></li>
-            <li><a href="#account-delete">একাউন্ট স্থায়ী ভাবে মুছে ফেলা</a></li>
-        </ul>
 
-        <div id="log-reg">
-            <h5 class="text-success fw-bold">ব্যবহারকারী নিবন্ধন আর লগইন এবং পিন পুনরুদ্ধার</h5>
-            <p>
-                <b class="text-danger">লগইনঃ</b> আপনি যদি ইতোমধ্যে একাউন্ট তৈরি করে থাকেন তাহলে ফোন নম্বর ও ৪ ডিজিটের
-                পিন দিয়ে
-                লগইন করে নিন অথবা গুগলো আইকনে ক্লিক করে ব্যবহৃত জিমেইল একাউন্টটি সিলেক্ট করে লগইন করে নিন।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ গুগল লগইন এর ক্ষেত্রে আপনার গুগল ইমেইলটি EBillZen এ নিবন্ধিত না হলে
-                    প্রাথমিক ভাবে আপনার কাছে
-                    আপনার সক্রিয় ফোন নম্বর চাওয়া হবে।
-                </i>
-                <br>
-                <b class="text-danger">নিবন্ধনঃ</b> নতুন একাউন্ট তৈরি করার ক্ষেত্রে আপনাকে লগইন স্ক্রিনের
-                <strong>নতুন একাউন্ট
-                    তৈরিকরুন</strong> বাটনে চেপে নিবন্ধন স্ক্রিনে যেতে হবে। এবং আপনার নাম, মোবাইল নম্বর (সক্রিয়), ৪
-                ডিজিটের পিন দিয়ে এবং শর্তাবলীর ঘরে
-                টিক চিহ্ন দিয়ে <strong>রেজিস্টার</strong> বাটন চেপে রেজিস্ট্রেশন/নিবন্ধন করে নিতে হবে।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ পরবর্তী স্ক্রিনে আপনাকে ওটিপি ভেরিফাই করতে হবে।
-                    <strong>রেজিস্টার</strong> বাটনে চাপার ১০
-                    থেকে ৬০ সেকেন্ডের ভিতর আপনার ফোনে একটি ওটিপি(OTP) প্রেরণ করা হবে। ওটিপি প্রবেশ করানোর পর ফেরিফাই
-                    বাটনে ক্লিক করে নিবন্ধন সম্পন্ন করতে হবে।
-                </i>
-                <br>
-                <b class="text-danger">পিন পুনরুদ্ধারঃ</b> এক্ষেত্রে আপনাকে <strong>লগইন</strong> স্ক্রিন থেকে
-                <strong>রিসেট ফাংশন</strong> বাটনে ক্লিক করে পরবর্তী নির্দেশনা মানতে হবে।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ পিন পুনরুদ্ধার এর ক্ষেত্রে পূর্বে নিবন্ধিত ফোন নম্বরটিই দিতে হবে।
-                </i>
-            </p>
-        </div>
-        <div id="new-meter">
-            <h5 class="text-success fw-bold">নতুন মিটার তথ্য সাবমিশন</h5>
-            <p>
-                <b class="text-danger">মিটার তথ্য সংরক্ষণঃ</b> নিচের ন্যাভিগেশন বার(Navigation bar) থেকে সেভ মিটার
-                অপশনটি চাপুন তা আপনাকে <strong>নতুন মিটার সংরক্ষণ</strong> স্ক্রিনে নিয়ে যাবে। সেখানে আপনি মিটার নং ও
-                অন্যান্য তথ্যাদি দিয়ে পুরণ করে <strong>মিটার সংরক্ষণ করুন</strong> বাটনে চেপে মিটার টি সংরক্ষণ করবেন।
-                সংরক্ষণ সফল ভাবে হলে তা আপনাকে একটি অ্যালার্ট ম্যাসেজে দেখাবে।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ মিটার নং টি অবশ্যই অনন্য হতে হবে। যেমনঃ রোম১, রোম২, অথবা মিটারের গায়ে
-                    দেখবেন কিছু ইউনিক ডিজিট লেখা আছে ঐটিই আপনার মিটার নং হিসেবে ব্যবহার করবেন।
-                </i>
-                <br>
-                <i class="text-danger">মিটার নং এ হাইফেন (-) বা আন্ডারস্কোর (_) ব্যাতিত অন্য কোনো স্পেশাল কি ব্যবহার
-                    করবেন না। যেমনঃ রোম১ কে রোম-১ এভাবে বা রোম_১ এভাবে লেখা যেতে পারে। তবে অন্য কোনো স্পেশাল কি ব্যবহার
-                    করা যাবে না। এবং ভাড়াটিয়ার ফোন নম্বর (ব্যবহার কারীর ফোন নম্বর) এর ক্ষেত্রে +8801XXXXXXXXX এর ফরম্যাট
-                    ব্যবহার করতে হবে। অথবা এই ফিল্ড টি খালি রাখলেও সমস্যা নেই। </i>
-            </p>
-        </div>
-        <div id="calc-bill">
-            <h5 class="text-success fw-bold">মিটার বিল হিসাব ও তথ্য শেয়ার</h5>
-            <p>
-                <b class="text-danger">বিল হিসাবঃ</b> নিচের ন্যাভিগেশন বার(Navigation bar) থেকে ৩ নম্বর/সেভ মিটার
-                অপশনটি চাপুন তা আপনাকে <strong>বিল হিসাব</strong> স্ক্রিনে নিয়ে যাবে। সেখানে আপনি ড্রপ ডাউন অপশন থেকে
-                কাঙ্ক্ষিত মিটার নং টি সিলেক্ট করলে কিছু প্রয়োজনীয় তথ্য দেখাবে। আপনি বর্তমান মিটার রিডিং ফিল্ডে বর্তমান
-                মিটার ইউনিট টি প্রবেশ করিয়ে প্রতি মাসের বিল একই ভাবে হিসাব করতে পারবেন। তার পর
-                <strong>বিল হিসাব</strong> বাটনে ক্লিক করলে আপনার ঐ মাসের মিটারের বিলটির হিসাব দেখাবে।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ আপনি যদি মিটারটির প্রথমবার বিল হিসাব করতে যান সেক্ষেত্রে আপনি
-                    প্রয়োজনীয় তথ্যের জাগায় <strong>সর্বশেষ মিটার রিডিং</strong> এর মান ০.০ ইউনিট দেখাবে। সেক্ষেত্রে
-                    আপনাকে অবশ্যই যেই মাসের বিল হিসাব করতে চাচ্ছেন তার পূর্বের মাসের বর্তমান মিটার রিডিং দিয়ে একটি খসড়া
-                    বিল হিসাব করে নিতে হবে। যা আপনাকে গারবেজ মান দেখাবে।
-                </i>
-                <br>
-                <i class="text-danger">
-                    যেমনঃ ধরেন আপনি মিটারটির এপ্রিল মাসের বিল হিসাব করতে চাচ্ছেন। তো আপনার বাসার মিটার এর বর্তমান মিটার
-                    রিডিং দেখাচ্ছে ২৫৫০ ইউনিট এবং ফেব্রুয়ারী মাসের বর্তমান মিটার রিডিং ছিল ২৫২৫ ইউনিট। তো সর্বশেষ মিটার
-                    রিডিং যদি ০.০ দেখায় তাহলে বুঝায় যাচ্ছে এটি ভুল দেখাচ্ছে। কারণ গত ফেব্রুয়ারী মাসের মিটার রিডিং ছিল
-                    ২৫২৫ ইউনিট। তাই আপনি প্রথমে ২৫২৫ দিয়ে একটি বিল হিসাব করে নিবেন এই অ্যাপে। এবং আবার যখন একই পদ্ধতিতে
-                    এখানে যখন বিল হিসাব করতে আসবেন তখন দেখবেন <strong>সর্বশেষ মিটার রিডিং ২৫২৫ ইউনিট</strong> ই
-                    দেখাচ্ছে। যা সঠিক। এখন আপনি বর্তমান মাস (এপ্রিল) মাসের বর্তমান মিটার রিডিং দিয়ে যথাযথ ভাবে বিল হিসাব
-                    করতে পারবেন।
-                </i>
-                <br>
-                <b class="text-danger">বিল তথ্য শেয়ারঃ</b> <strong>বিল হিসাব</strong> বাটনে চাপার পর আপনি যেই বিল
-                হিসাবকৃত স্ক্রিনে যাবেন সেখানে নিচের দিকে Whatsapp বা SMS এর মাধ্যমে হিসাবকৃত বিলের তথ্যটি শেয়ার করতে
-                পারবেন।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ SMS এর মাধ্যমে বিল শেয়ারের ক্ষেত্রে আপনার সিম কম্পানি কর্তিক SMS চার্জ
-                    আপনার বর্তমান Balance থেকে কেটে নিবে।
-                </i>
-            </p>
-        </div>
-        <div id="meter-update">
-            <h5 class="text-success fw-bold">মিটার তথ্য হালনাগাদ/আপডেট এবং মুছে ফেলা</h5>
-            <p>
-                <b class="text-danger">মিটার তথ্য আপডেটঃ</b> নিচের ন্যাভিগেশন বার(Navigation bar) থেকে ৪ নম্বর/সেটিংস
-                অপশনটি চাপুন তা আপনাকে <strong>সেটিংস</strong> স্ক্রিনে নিয়ে যাবে। সেখানে আপনি উপরের দিকে একটি ড্রায়ার
-                মেনু বাটন দেখতে পাবেন। সেটিতে চাপার পর একটি ড্রায়ার ওপেন হবে সেখানে <strong>মিটার পরিচালনা করুন</strong>
-                বাটনে চাপুন তা আপনাকে এই পর্যন্ত সংরক্ষিত মিটার গুলোকে দেখাবে। সেখান থেকে আপনি যেই মিটারটির তথ্য আপডেট
-                বা হালনাগাদ করতে চাচ্ছেন সেটিতে চাপুন। তা আপনাকে <strong>মিটার সম্পাদনা করুন</strong> স্ক্রিনে নিয়ে
-                যাবে। ডান পাশের মিটার হালনাগাদ চালু করুন সুইচে চেপে ফিল্ড গুলো কে একটিভ করুন এবং প্রয়োজনীয় তথ্য আপডেট
-                করুন।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ অবশ্যই আপনি সর্বশেষ মিটার রিডিং ফিল্ড এর ডাটা আপডেট এর ক্ষেত্রে সতর্ক
-                    থাকবেন। কারণ, এই ফিল্ডের অনাকাংখিত আপডেটের ফলে মিটার বিল হিসাবের ভুল এর দায় অ্যাপ বা কর্তৃপক্ষ বহন
-                    করবে না।
-                </i>
-                <br>
-                <b class="text-danger">মিটার মুছুনঃ</b> মিটার সম্পাদনা করুন এই স্ক্রিনে নিচের দিকে লাল রঙ্গের একটি বাটন
-                দেখতে পাবেন এই বাটন চেপে মিটারটি স্থায়ী ভাবে মুছে ফেলুন।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ মিটার টি মুছে/ ডিলিট করে ফেললে সেই তথ্য আর ফিরে পাওয়া সম্ভব নয়। তাই
-                    অনাকাংখিত ভাবে এই বাটন চেপে মিটার তথ্য মুছে ফেলা হলে কর্তৃপক্ষ তার দায় বহন করবে না।
-                </i>
-            </p>
-        </div>
-        <div id="bill-share">
-            <h5 class="text-success fw-bold">হিসাবকৃত বিল তথ্য দেখা ও তথ্য শেয়ার</h5>
-            <p>
-                <b class="text-danger">তথ্য দেখাঃ</b> নিচের ন্যাভিগেশন বার(Navigation bar) থেকে ১ নম্বর/ড্যাশবোর্ড
-                অপশনটি চাপুন তা আপনাকে <strong>ড্যাশবোর্ড</strong> স্ক্রিনে নিয়ে যাবে। সেখানে আপনি এই পর্যন্ত সংরক্ষণকৃত
-                সবগুলো মিটার ও তার হিসাবকৃত বিল দেখতে পাবেন। যেই মিটারের তথ্য দেখতে চাচ্ছেন। সেই মিটারে ওপর চাপুন তা
-                আপনাকে হিসাবকৃত বিলের স্ক্রিনে নিয়ে যাবে।
-                <br>
-                <b class="text-danger">বিল শেয়ারঃ</b> ড্যাশবোর্ড এর প্রতিটি মিটার এর হিসাবকৃত স্ক্রিনের বিল গুলোতে
-                দীর্ঘক্ষণ চেপে রাখলে তা আপনাকে ঐ তথ্যটি শেয়ার করার জন্য অপশন দেখাবে যা ব্যবহার করে আপনি আপনার ভাড়াটিয়ার
-                সাথে ঐ তথ্যটি শেয়ার করতে পারবেন।
-            </p>
-        </div>
-        <div id="user-update">
-            <h5 class="text-success fw-bold">ব্যবহারকারীর তথ্য হালনাগাদ/আপডেট</h5>
-            <p>
-                <b class="text-danger">ব্যবহারকারীর তথ্য আপডেটঃ</b> নিচের ন্যাভিগেশন বার(Navigation bar) থেকে ৪
-                নম্বর/সেটিংস
-                অপশনটি চাপুন তা আপনাকে <strong>সেটিংস</strong> স্ক্রিনে নিয়ে যাবে। সেখানে আপনি আপনার ফোন নম্বরের ডান
-                পাশে একটি পেনসিল আইকন দেখতে পাবেন। সেটিতে চাপলে আপনি <strong>ব্যবহারকারীর তথ্য হালনাগাদ</strong>
-                স্ক্রিনে চলে যাবেন সেখান থেকে আপনি আপনার নাম, ও প্রোফাইল ছবিটি পরিবর্তন করতে পারবেন।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ আপনি কোনভাবেই আপনার ফোন নম্বরটি পরিবর্তন করতে পারবেন না। তবে ইমেইলটি
-                    আপডেট করতে চাইলে <strong>+8801330071239</strong> এ ফোন করুন অথবা
-                    <strong>innovatenestlabs@gmail.com</strong> এ বর্তমান ইমেইল এড্রেস ও যেটি নতুন ভাবে ব্যবহার করতে
-                    চাচ্ছেন সেই ইমেইলটি পাঠান। ফিরতি ইমেইলে বা ফোন কলে আপনাকে কিছু তথ্য দিতে বলা হতে পারে। তথ্য ভেরিফাই
-                    হয়ে গেলে আপনার নতুন ইমেইলটি সেটাপ হয়ে যাবে। <br>
-                    এক্ষেত্রে ১২ ঘন্টার মতো বা তারো বেশি সময় লাগতে পারে সম্পূর্ণ ধাপ শেষ করতে।
-                </i>
-            </p>
-        </div>
-        <div id="account-delete">
-            <h5 class="text-success fw-bold">একাউন্ট স্থায়ী ভাবে মুছে ফেলা</h5>
-            <p>
-                <b class="text-danger">একাউন্ট মুছে ফেলাঃ</b> নিচের ন্যাভিগেশন বার(Navigation bar) থেকে ৪
-                নম্বর/সেটিংস
-                অপশনটি চাপুন তা আপনাকে <strong>সেটিংস</strong> স্ক্রিনে নিয়ে যাবে। সেখানে <strong>একাউন্ট সংবেদনশীল অংশ
-                    দেখুন</strong> নামে একটি সুইচ পেয়ে যাবেন সেটি চালু করলে <strong>আমার একাউন্টটি মুছু ফেলুন</strong>
-                নামে
-                একটি বাটন দৃশ্যমান হবে। উক্ত বাটনটি চেপে আপনার একাউন্টি স্থায়ী ভাবে মুছে ফেলতে পারবেন যদি আপনি অ্যাপটি
-                আর ব্যবহার করতে না চান।
-                <br>
-                <i class="text-secondary">বিঃদ্রঃ একাউন্টটি অনাকাংখিত ভাবে ডিলিট বা মুছে ফেললে অনতিবিলম্বে
-                    <strong>+8801330071239</strong> নম্বরে ফোন করে জানান। অথবা যেই ফোন নম্বর এবং ইমেইল এড্রেস দিয়ে
-                    একাউন্টটি খুলে ছিলেন সেই অনুরুপ তথ্য দিয়ে একাউন্ট পুনরায় খুললে একাউন্টটি যাবতীয় তথ্য স্থায়ী ভাবে
-                    মুছে ফেলা হবে না। এবং আপনি আপনার আগের সকল তথ্য ফিরে পাবেন। তবে এক্ষেত্রে আপনাকে ২৪ ঘন্টার ভিতর একশন
-                    নিতে হবে অন্যথায় আপনার তথ্য আর ফিরে পাবেন না আর একাউন্টি স্থায়ীভাবে মুছে ফেলা হবে। এক্ষেত্রে
-                    কর্তৃপক্ষ কোনভাবে দায়ী থাকবে না।
-                </i>
-            </p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>উপরোক্ত লেখার ভিতর কোনো ধরনের ভুল ত্রুটি লক্ষ হলে আপনার সাজেশনটি
-                    <strong>innovatenestlabs@gmail.com</strong> এই মেইলে পাঠাতে পারেন।
-                </p>
-            </div>
-            <div class="col-md-6">
-                <p>
-                    EBillZen সম্পর্কে বিস্তারিত জানতে <a href="/">এখানে ক্লিক করুন।</a>
-                </p>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Innovate Nest Labs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="guides.html">Guidelines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="policy.html">Privacy Policy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <footer class="container">
+    </nav>
 
-        <div class="row">
-            <div class="col-md-6">
-                <p>Uttar Mawna, Gazipur, Bangladesh</p>
-                <p>Email: innovatenestlabs@gmail.com</p>
-            </div>
-            <div class="col-md-6">
-                <img src="favicon.ico" alt="App Favicon">
-            </div>
+    <header class="page-header text-center">
+        <div class="container">
+            <h2 class="section-title">অ্যাপ গাইডলাইনে আপনাকে স্বাগতম</h2>
+            <p class="text-muted">EBillZen অ্যাপটি সঠিকভাবে ব্যবহারের বিস্তারিত নিয়মাবলি নিচে দেওয়া হলো</p>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p id="copyright">
-                    <!-- JavaScript will populate the year here -->
-                </p>
-            </div>
-        </div>
+    </header>
 
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="guide-nav-card">
+                    <h6 class="fw-bold mb-3">দ্রুত নেভিগেশন</h6>
+                    <ul>
+                        <li><a href="#log-reg">নিবন্ধন, লগইন এবং পিন পুনরুদ্ধার</a></li>
+                        <li><a href="#new-meter">নতুন মিটার তথ্য সংরক্ষণ</a></li>
+                        <li><a href="#calc-bill">মিটার বিল হিসাব ও তথ্য শেয়ার</a></li>
+                        <li><a href="#meter-update">মিটার তথ্য আপডেট ও মুছে ফেলা</a></li>
+                        <li><a href="#bill-share">হিসাবকৃত বিল দেখা ও শেয়ার</a></li>
+                        <li><a href="#user-update">ব্যবহারকারীর তথ্য পরিবর্তন</a></li>
+                        <li><a href="#account-delete">একাউন্ট মুছে ফেলা</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+
+                <div id="log-reg" class="guide-section">
+                    <h5>ব্যবহারকারী নিবন্ধন, লগইন এবং পিন পুনরুদ্ধার</h5>
+                    <p><strong class="text-danger">লগইনঃ</strong> আপনার একাউন্ট থাকলে ফোন নম্বর ও ৪ ডিজিটের পিন দিয়ে
+                        অথবা গুগল আইকনে ক্লিক করে সরাসরি লগইন করুন।</p>
+                    <div class="note-box">বিঃদ্রঃ গুগল লগইন এর ক্ষেত্রে আপনার ইমেইলটি নিবন্ধিত না থাকলে আপনার সক্রিয় ফোন
+                        নম্বরটি চাওয়া হবে।</div>
+
+                    <p><strong class="text-danger">নিবন্ধনঃ</strong> নতুন একাউন্ট খুলতে 'নতুন একাউন্ট তৈরিকরুন' বাটনে
+                        চাপ দিন। আপনার নাম, মোবাইল নম্বর এবং ৪ ডিজিটের পিন দিয়ে শর্তাবলীতে টিক দিয়ে রেজিস্টার করুন।</p>
+                    <div class="note-box">বিঃদ্রঃ রেজিস্ট্রেশন সম্পন্ন করতে আপনার ফোনে আসা ওটিপি (OTP) ভেরিফাই করতে হবে।
+                    </div>
+
+                    <p><strong class="text-danger">পিন পুনরুদ্ধারঃ</strong> পিন ভুলে গেলে লগইন স্ক্রিন থেকে 'রিসেট
+                        ফাংশন' বাটনে ক্লিক করে নির্দেশনা অনুসরণ করুন।</p>
+                </div>
+
+                <div id="new-meter" class="guide-section">
+                    <h5>নতুন মিটার তথ্য সাবমিশন</h5>
+                    <p><strong class="text-danger">মিটার তথ্য সংরক্ষণঃ</strong> ন্যাভিগেশন বার থেকে 'সেভ মিটার' অপশনে
+                        গিয়ে মিটার নম্বর ও প্রয়োজনীয় তথ্য দিয়ে 'মিটার সংরক্ষণ করুন' বাটনে চাপ দিন।</p>
+                    <div class="note-box">বিঃদ্রঃ মিটার নম্বরটি অবশ্যই ইউনিক হতে হবে (যেমন: রুম-১, মিটার-১০১)।</div>
+                    <div class="danger-note">সতর্কতা: মিটার নম্বরে হাইফেন (-) বা আন্ডারস্কোর (_) ব্যতীত অন্য কোনো
+                        স্পেশাল ক্যারেক্টার ব্যবহার করবেন না।</div>
+                </div>
+
+                <div id="calc-bill" class="guide-section">
+                    <h5>মিটার বিল হিসাব ও তথ্য শেয়ার</h5>
+                    <p><strong class="text-danger">বিল হিসাবঃ</strong> 'বিল হিসাব' স্ক্রিনে গিয়ে মিটারটি সিলেক্ট করুন
+                        এবং বর্তমান রিডিং ইনপুট দিন। এরপর 'বিল হিসাব' বাটনে ক্লিক করলেই হিসাবটি চলে আসবে।</p>
+                    <div class="note-box">বিঃদ্রঃ প্রথমবার হিসাব করার সময় গত মাসের রিডিং ইনপুট দিয়ে একটি ড্রাফট বিল করে
+                        নিতে হবে যাতে পরবর্তী মাস থেকে সঠিক হিসাব পাওয়া যায়।</div>
+                    <p><strong class="text-danger">শেয়ারঃ</strong> হিসাবের নিচে থাকা Whatsapp বা SMS বাটন ব্যবহার করে
+                        ভাড়াটিয়াকে বিল পাঠাতে পারবেন।</p>
+                </div>
+
+                <div id="meter-update" class="guide-section">
+                    <h5>মিটার তথ্য হালনাগাদ ও মুছে ফেলা</h5>
+                    <p><strong class="text-danger">আপডেটঃ</strong> সেটিংস থেকে 'মিটার পরিচালনা করুন' অপশনে গিয়ে
+                        নির্দিষ্ট মিটারটি সিলেক্ট করুন এবং তথ্য আপডেট করুন।</p>
+                    <p><strong class="text-danger">মুছে ফেলাঃ</strong> মিটার এডিট স্ক্রিনের নিচে থাকা লাল রঙের বাটন চেপে
+                        মিটার মুছে ফেলা যাবে।</p>
+                    <div class="danger-note">সতর্কতা: মিটার একবার মুছে ফেললে সেই তথ্য আর পুনরুদ্ধার করা সম্ভব নয়।</div>
+                </div>
+
+                <div id="bill-share" class="guide-section">
+                    <h5>হিসাবকৃত বিল তথ্য দেখা ও তথ্য শেয়ার</h5>
+                    <p><strong class="text-danger">তথ্য দেখাঃ</strong> ড্যাশবোর্ড থেকে সংরক্ষিত মিটারের ওপর চাপ দিয়ে
+                        হিস্টোরি দেখা যাবে। প্রতিটি বিলের ওপর দীর্ঘক্ষণ (Long Press) চেপে রাখলে শেয়ার করার অপশন আসবে।
+                    </p>
+                </div>
+
+                <div id="user-update" class="guide-section">
+                    <h5>ব্যবহারকারীর তথ্য হালনাগাদ</h5>
+                    <p><strong class="text-danger">প্রোফাইল আপডেটঃ</strong> সেটিংস স্ক্রিনে ফোন নম্বরের পাশে থাকা পেনসিল
+                        আইকনে ক্লিক করে নাম ও প্রোফাইল ছবি পরিবর্তন করা যাবে।</p>
+                    <div class="note-box">বিঃদ্রঃ ফোন নম্বর পরিবর্তনযোগ্য নয়। ইমেইল পরিবর্তনের জন্য
+                        innovatenestlabs@gmail.com-এ যোগাযোগ করুন।</div>
+                </div>
+
+                <div id="account-delete" class="guide-section">
+                    <h5>একাউন্ট স্থায়ী ভাবে মুছে ফেলা</h5>
+                    <p><strong class="text-danger">প্রক্রিয়াঃ</strong> সেটিংস থেকে 'একাউন্ট সংবেদনশীল অংশ দেখুন' সুইচটি
+                        অন করে একাউন্ট মুছে ফেলার বাটনটি পাওয়া যাবে।</p>
+                    <div class="danger-note">সতর্কতা: একাউন্ট মুছে ফেললে পরবর্তী ২৪ ঘণ্টার মধ্যে একই নম্বর দিয়ে পুনরায়
+                        রেজিস্ট্রেশন না করলে সকল তথ্য স্থায়ীভাবে হারিয়ে যাবে।</div>
+                </div>
+
+                <div class="card bg-light border-0 p-4 mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h6>কোনো সমস্যা বা ভুল লক্ষ্য করেছেন?</h6>
+                            <p class="small mb-0">আমাদের মেইল করুন অথবা কল করুন। আমরা দ্রুত সমাধানের চেষ্টা করব।</p>
+                        </div>
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <a href="mailto:innovatenestlabs@gmail.com" class="btn btn-outline-success btn-sm">ইমেইল
+                                পাঠান</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <h5 class="footer-logo-text mb-3">Innovate Nest Labs</h5>
+                    <p class="small text-muted mb-1">Uttar Mawna, Gazipur, Bangladesh</p>
+                    <p class="small text-muted">innovatenestlabs@gmail.com</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="/assets/images/ebill_logo.png" alt="Logo" class="mb-3"
+                        style="width: 50px; height: 50px; filter: grayscale(1) brightness(2);">
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="policy.html" class="footer-link small">Privacy</a>
+                        <a href="terms.html" class="footer-link small">Terms</a>
+                        <a href="guides.html" class="footer-link small">Guides</a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="small mb-2">Developed for a Digital Bangladesh</p>
+                    <p class="small" id="copyright"></p>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var currentYear = new Date().getFullYear();
             var copyrightElement = document.getElementById("copyright");
-            copyrightElement.innerHTML = "&copy; " + currentYear + " EBillzen, A product of Innovate Nest Labs, All Rights Reserved.";
+            copyrightElement.innerHTML = "&copy; " + currentYear + " EBillZen. All Rights Reserved.";
         });
     </script>
-
-
 </body>
 
 </html>
