@@ -39,7 +39,7 @@ In many residential and commercial complexes, managing electricity sub-meters is
 
 | Platform | Link |
 | :--- | :--- |
-| **Amazon Appstore** | [Download Here](https://amzn.to/3RV4KrZ) |
+| **Play Store** | [Download Here](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen&pcampaignid=web_share) |
 | **Direct APK** | [Download from Google Drive](https://drive.google.com/file/d/1m-mu-4ggqf8yV5SbYTMdExRFvJUtms9W/view) |
 
 ---
