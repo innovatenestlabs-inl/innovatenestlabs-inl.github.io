@@ -1,8 +1,8 @@
 # 🚀 EBillZen | Digitalizing Sub-Meter Management
 
-[![Product Badge](https://img.shields.io/badge/Product-EBillZen-brown?style=for-the-badge)](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen&pcampaignid=web_share)
+[![Product Badge](https://img.shields.io/badge/Product-EBillZen-brown?style=for-the-badge)](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen)
 [![Company](https://img.shields.io/badge/Innovate_Nest_Labs-Gazipur%2C_BD-2c3e50?style=for-the-badge)](mailto:innovatenestlabs@gmail.com)
-[![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android)](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen&pcampaignid=web_share)
+[![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android)](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen)
 
 **EBillZen** is a specialized property management and home automation tool designed by **Innovate Nest Labs**. It empowers homeowners, shop owners, and market managers in Bangladesh to move beyond the traditional "Khata" (manual ledger) and embrace digital automation.
 
@@ -39,7 +39,7 @@ In many residential and commercial complexes, managing electricity sub-meters is
 
 | Platform | Link |
 | :--- | :--- |
-| **Play Store** | [Download Here](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen&pcampaignid=web_share) |
+| **Play Store** | [Download Here](https://play.google.com/store/apps/details?id=com.innovatenestlabs.ebillzen) |
 | **Direct APK** | [Download from Google Drive](https://drive.google.com/file/d/1m-mu-4ggqf8yV5SbYTMdExRFvJUtms9W/view) |
 
 ---
